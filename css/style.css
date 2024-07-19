@@ -20,13 +20,21 @@ main {
 
 .section-top{
     height: 15%;
-    background-color: aquamarine;
 }
 
-.section-big-top{
-    height: 30%;
-    background-color: rgb(127, 240, 255);
+.section-alert{
+    height: 15%;
 }
+
+.section-search{
+    height: 10%;
+}
+
+.section-main{
+    height: 60%;
+    overflow-y: scroll;
+}
+
 
 .section-center{
     height: 70%;
@@ -35,10 +43,17 @@ main {
 
 .section-bottom{
     height: 15%;
-    background-color: rgb(172, 127, 255);
 }
 
 .bg-image{
     background-image: url(../img/mine.jpg);
     background-repeat: repeat;
+}
+
+.bg-gray{
+    background-color: rgb(235, 235, 235);
+}
+
+.bg-azure{
+    background-color: rgb(54, 182, 221);
 }

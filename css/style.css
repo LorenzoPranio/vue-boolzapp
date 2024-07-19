@@ -54,6 +54,28 @@ main {
     background-color: rgb(235, 235, 235);
 }
 
+.col-gray{
+    color: rgb(180, 180, 180);
+    font-weight: bold;
+}
+
 .bg-azure{
     background-color: rgb(54, 182, 221);
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.pad-5{
+    padding: 5px;
+}
+
+.input-group-text{
+    border: none;
+}
+
+.form-control{
+    border: none;
+    font-size: 15px;
 }

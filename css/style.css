@@ -23,7 +23,7 @@ main {
 }
 
 .section-alert{
-    height: 50px;
+    height: 80px;
 }
 
 .section-search{
@@ -31,7 +31,7 @@ main {
 }
 
 .section-main{
-    height: calc(100% - 140px);
+    height: calc(100% - 170px);
     overflow-y: scroll;
 }
 
@@ -83,4 +83,30 @@ main {
     padding: 10px 20px;
     border: none;
     font-size: 20px;
+}
+
+.fa-bell-slash{
+    font-size: 20px;
+    background-color: white;
+    padding: 8px 6px;
+    border-radius: 50%;
+    color: rgb(54, 182, 221);
+    margin-top: 22px;
+    margin-left: 6px;
+}
+
+.alert-text{
+    font-weight: bold;
+    font-size: small;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 22px;
+}
+
+.alert-text-secondary{
+    font-size: small;
+    text-decoration: underline;
+    margin-left: 52px;
+    margin-top: -15px;
 }

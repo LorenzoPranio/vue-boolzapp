@@ -33,7 +33,7 @@
                                     <div class="content">
                                         <i class="fas fa-bell-slash"></i>
                                         <p class="alert-text">Ricevi notifiche di nuovi messaggi!</p>
-                                        <p class="alert-text-secondary">Attive le notifiche!</p>
+                                        <p class="alert-text-secondary">Attive le notifiche desktop!</p>
                                     </div>
                                 </div>
                                 <div class="section-search">
@@ -47,8 +47,11 @@
                                     </div>
                                 </div>
                                 <div class="section-main">
-                                    <div class="content d-flex">
-                                    </div>
+                                    <div class="contact-section"  v-for="(contact, index) in contacts">
+                                        <img :src="contact.avatar" alt="contact.name" class="avatar mb-1">
+                                        <span class="fw-bold mx-2">{{contact.name}}</span>
+                                        <p class="access-contact">Ultimo accesso alle {{ contact.messages.at(-1).date.split(" ")[1] }}</p>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -67,8 +70,7 @@
                                             <button><i class="fas fa-face-flushed text-secondary"></i></button>
                                             <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                             <button><i class="fas fa-location-arrow arrow-rotate text-secondary"></i></button>
-                                          </div>
-                                          
+                                        </div>     
                                     </div>
                                 </div>
                             </div>

@@ -5,7 +5,7 @@
 }
 
 main {
-    height: 100%;
+    height: 100vh;
     background-color: rgba(217, 219, 212, 1);
     background-image: linear-gradient(to bottom, rgba(0, 150, 136, 1) 0%, rgba(0, 150, 136, 1) 10%, rgba(217, 219, 212, 1) 10%, rgba(217, 219, 212, 1) 100vh);
 }
@@ -14,7 +14,7 @@ main {
 #right{
     background-color: white;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     border: 1px solid black;
 }
 
@@ -148,4 +148,8 @@ main {
 
 .contact-section:hover{
     background-color: rgba(217, 219, 212, 1);
+}
+
+.bg-lightgreen{
+    background-color: rgb(182, 243, 182);
 }

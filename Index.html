@@ -47,7 +47,7 @@
                                     </div>
                                 </div>
                                 <div class="section-main">
-                                    <div class="contact-section"  v-for="(contact, index) in contacts">
+                                    <div class="contact-section" v-for="(contact, index) in contacts" @click="showMessage(index)" :key="index">
                                         <img :src="contact.avatar" alt="contact.name" class="avatar mb-1">
                                         <span class="fw-bold mx-2">{{contact.name}}</span>
                                         <p class="access-contact">Ultimo accesso alle {{ contact.messages.at(-1).date.split(" ")[1] }}</p>
@@ -58,11 +58,25 @@
                         <div class="col-8 d-flex">
                             <div class="content" id="right">
                                 <div class="section-top bg-gray">
-                                    <div class="content d-flex">
+                                    <div class="content">
+                                        <img :src="contacts[activeContact].avatar" class="avatar mb-1">
+                                        <span class="fw-bold mx-2">{{contacts[activeContact].name}}</span>
+                                        <p class="access-contact">Ultimo accesso alle {{ contacts[activeContact].messages.at(-1).date.split(" ")[1] }}</p>
                                     </div>
                                 </div>
                                 <div class="section-center bg-image">
-                                    <div class="content"></div>
+                                    <div class="content">
+                                        <div v-for="(message, index) in contacts[activeContact].messages" :key="index">
+                                            <div v-if="message.status === 'sent'" class="text-end">
+                                                <p class="bg-lightgreen d-inline-block p-2 rounded m-4">
+                                                    {{ message.message }}</p>
+                                            </div>
+                                            <div v-else class="text-start">
+                                                <p class="bg-white d-inline-block p-2 rounded m-4">
+                                                    {{ message.message }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="section-bottom bg-gray">
                                     <div class="content">

@@ -98,6 +98,13 @@ createApp({
                     status: 'sent',
                 });
                 this.add_message = '';
+                setTimeout(() => {
+                    this.contacts[this.activeContact].messages.push({
+                        date: new Date().toLocaleString(),
+                        message: 'Ok.',
+                        status: 'received',
+                    });
+                }, 1000);
             }
         }
     }

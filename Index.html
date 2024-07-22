@@ -87,7 +87,8 @@
                                     <div class="content">
                                         <div class="input-group">
                                             <button><i class="fas fa-face-flushed text-secondary"></i></button>
-                                            <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                            <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Recipient's username" aria-describedby="basic-addon2" 
+                                            @keyup.enter="send_message" v-model="add_message">
                                             <button><i class="fas fa-location-arrow arrow-rotate text-secondary"></i></button>
                                         </div>     
                                     </div>

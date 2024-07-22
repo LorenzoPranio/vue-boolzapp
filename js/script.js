@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            add_message: '',
             activeContact: 0,
             contacts: [
                 {
@@ -88,6 +89,16 @@ createApp({
     methods: {
         showMessage(index) {
             this.activeContact = index;
+        },
+        send_message(){
+            if(this.add_message.trim() !== '' && this.contacts[this.activeContact]){
+                this.contacts[this.activeContact].messages.push({
+                    date: new Date().toLocaleString(),
+                    message: this.add_message,
+                    status: 'sent',
+                });
+                this.add_message = '';
+            }
         }
     }
 }).mount('#app');

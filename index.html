@@ -41,13 +41,13 @@
                                         <div class="col-12 pad-5">
                                             <div class="input-group">
                                                 <span class="input-group-text bg-white"><i class="fab fa-sistrix text-secondary fw-bold"></i></span>
-                                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                                                <input type="text"  v-model="search_query" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
                                             </div>    
                                         </div>
                                     </div>
                                 </div>
                                 <div class="section-main">
-                                    <div class="contact-section" v-for="(contact, index) in contacts" @click="showMessage(index)" :key="index">
+                                    <div class="contact-section" v-for="(contact, index) in filtered_contacts" @click="showMessage(index)" :key="index">
                                         <img :src="contact.avatar" alt="contact.name" class="avatar mb-1">
                                         <span class="fw-bold mx-2">{{contact.name}}</span>
                                         <p class="access-contact">Ultimo accesso alle {{ contact.messages.at(-1).date.split(" ")[1] }}</p>

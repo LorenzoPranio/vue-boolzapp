@@ -5,6 +5,7 @@ createApp({
         return {
             add_message: '',
             activeContact: 0,
+            search_query: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -106,6 +107,16 @@ createApp({
                     });
                 }, 1000);
             }
+        },
+    },
+    computed: {
+        filtered_contacts() {
+            if(!this.search_query.trim()){
+                return this.contacts;
+            }
+            return this.contacts.filter(contact =>
+                contact.name.toLowerCase().includes(this.search_query.toLowerCase())
+            );
         }
-    }
+    },
 }).mount('#app');
